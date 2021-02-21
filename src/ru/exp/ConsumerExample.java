@@ -4,13 +4,14 @@ import ru.data.Student;
 import ru.data.StudentDataBase;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 
-public class Consumer {
+public class ConsumerExample {
 
-    static java.util.function.Consumer<Student> c2 = student -> System.out.println(student);
-    static java.util.function.Consumer<Student> consName = (student) -> System.out.println(student.getName());
-    static java.util.function.Consumer<Student> consActivites = (student) -> System.out.println(student.getActivites());
+    static Consumer<Student> c2 = student -> System.out.println(student);
+    static Consumer<Student> consName = (student) -> System.out.println(student.getName());
+    static Consumer<Student> consActivites = (student) -> System.out.println(student.getActivites());
 
     public static void printNames() {
 
@@ -40,7 +41,7 @@ public class Consumer {
     }
 
     //применить к списку консюмер и вывести каждый элемент
-    public static <T> void test(List<T> list1, java.util.function.Consumer<T> consumer) {
+    public static <T> void test(List<T> list1, Consumer<T> consumer) {
         list1.forEach(consumer::accept);
         printNames();
     }
