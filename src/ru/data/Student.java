@@ -6,6 +6,14 @@ public class Student {
     private String name;
     private String gender;
 
+    public Student() {
+
+    }
+
+    public Student(String s) {
+        name = s;
+    }
+
     public int getGradeLevel() {
         return gradeLevel;
     }
@@ -44,6 +52,10 @@ public class Student {
 
     public String getGender() {
         return gender;
+    }
+
+    public void printListActivites() {
+        System.out.println(activites);
     }
 
     public void setGender(String gender) {

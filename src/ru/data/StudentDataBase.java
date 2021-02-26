@@ -3,8 +3,11 @@ package ru.data;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class StudentDataBase {
+
+    public static Supplier<Student> createStudent = () -> new Student("Vova", "M", 5, Arrays.asList("volebol", "futbol"));
 
     public static List<Student> getAllStudent() {
 
